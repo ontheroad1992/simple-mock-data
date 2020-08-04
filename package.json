@@ -1,7 +1,7 @@
 {
   "name": "simple-mock-data",
   "version": "1.0.3",
-  "description": "",
+  "description": "简易的本地虚拟数据服务",
   "main": "index.js",
   "scripts": {
     "lint": "eslint src/**",
@@ -15,21 +15,30 @@
     "bin",
     "src"
   ],
-  "author": "",
+  "keywords": [
+    "mock",
+    "node",
+    "http"
+  ],
+  "author": "ontheroad1992",
   "license": "ISC",
+  "homepage": "https://github.com/ontheroad1992/simple-mock-data",
+  "bugs": {
+    "url": "https://github.com/ontheroad1992/simple-mock-data/issues"
+  },
   "dependencies": {
     "@koa/cors": "^3.1.0",
     "commander": "^5.1.0",
-    "koa": "^2.12.0",
-    "koa-router": "^9.0.1",
+    "koa": "^2.13.0",
+    "koa-router": "^9.1.0",
     "mockjs": "^1.1.0",
     "nodemon": "^2.0.4"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^3.8.0",
-    "@typescript-eslint/parser": "^3.8.0",
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
+    "@typescript-eslint/eslint-plugin": "^3.8.0",
+    "@typescript-eslint/parser": "^3.8.0",
     "commitizen": "^4.1.2",
     "cz-conventional-changelog": "^3.2.0",
     "eslint": "^7.6.0",
@@ -37,7 +46,7 @@
     "eslint-config-standard": "^14.1.1",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
     "husky": "^4.2.5",
