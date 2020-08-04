@@ -2,7 +2,14 @@
 简易的本地模拟数据服务，使用方便，基于 [mock.js](http://mockjs.com/)、koa、nodemon 制作，支持 http 协议
 
 ## 目录
-[toc]
+- [Simple Mock Data](#simple-mock-data)
+  - [目录](#目录)
+  - [安装](#安装)
+  - [使用方式](#使用方式)
+  - [配置方式](#配置方式)
+    - [数据文件](#数据文件)
+    - [Options](#options)
+  - [推荐使用方式](#推荐使用方式)
 
 ## 安装
 ```cmd
@@ -52,9 +59,8 @@ module.exports = {
 };
 ```
 
-### 参数
+### Options
 ```
-Options:
   -v, --version             输出当前的版本号
   -p, --prot [number]       端口号 (default: 3001)
   -d, --dir <string>        路径 (default: "./db")
