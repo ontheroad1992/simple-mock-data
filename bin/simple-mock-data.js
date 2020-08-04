@@ -11,10 +11,10 @@ program.version(PACKAGR.version, '-v, --version', '输出当前的版本号');
 
 // 初始化
 program
-  .option('-p, --prot <number>', '端口号')
-  .option('-d, --dir <string>', '路径')
-  .option('-P, --prefix <string>', '接口前缀')
-  .option('-ls, --listShow <boolean>', '是否显示接口列表');
+  .option('-p, --prot [number]', '端口号', 3001)
+  .option('-d, --dir <string>', '路径', './db')
+  .option('-P, --prefix <string>', '接口前缀', '/api')
+  .option('-ls, --listShow <boolean>', '是否显示接口列表', 1);
 
 program.parse(process.argv);
 

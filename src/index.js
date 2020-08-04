@@ -23,12 +23,14 @@ const simpleMock = (PROT = 3001, dbPath, option) => {
     listShow: true,
     ...option,
   };
+
+  const baseUrl = `http://localhost:${PROT}`;
   app.use(cors());
-  app.use(routes(defaultDbPath(dbPath), option));
+  app.use(routes(defaultDbPath(dbPath), baseUrl, option));
 
   return app.listen(PROT, () => {
     // eslint-disable-next-line no-console
-    console.log('mock 服务器启动完成', `http://localhost:${PROT}`);
+    console.log('mock 服务器启动完成');
   });
 };
 

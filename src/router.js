@@ -3,13 +3,13 @@
  * @Author: ontheroad1992
  * @Date: 2020-02-21 17:38:36
  * @LastEditors: ontheroad1992
- * @LastEditTime: 2020-08-04 15:02:57
+ * @LastEditTime: 2020-08-04 15:46:44
  */
 const Router = require('koa-router');
 const Mock = require('mockjs');
 const fs = require('fs');
 
-module.exports = (routePath, { prefix, listShow }) => {
+module.exports = (routePath, baseUrl, { prefix, listShow }) => {
   const router = new Router({
     prefix,
   });
@@ -22,7 +22,7 @@ module.exports = (routePath, { prefix, listShow }) => {
       Object.keys(module).forEach((item) => {
         const [method, route, state = 200] = item.split(' ');
         // eslint-disable-next-line no-console
-        if (listShow) console.log('mock 接口:', `${method.toLocaleUpperCase()} /api${route}`);
+        if (listShow) console.log('mock 接口:', `${method.toLocaleUpperCase()} ${baseUrl}${prefix}${route}`);
         router[method.toLocaleLowerCase()](route, async (ctx) => {
           ctx.response.status = parseInt(state);
           ctx.body = Mock.mock(module[item]);
