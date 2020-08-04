@@ -20,7 +20,7 @@ function defaultDbPath(dbPath) {
 const simpleMock = (PROT = 3001, dbPath, option) => {
   option = {
     prefix: '/api',
-    lisShow: true,
+    listShow: true,
     ...option,
   };
   app.use(cors());

@@ -1,6 +1,6 @@
 module.exports = {
   'post /test 401': {
-    msg: 'hello world',
+    msg: 'hello worlds',
     code: 40001,
   },
   'get /test/list': {

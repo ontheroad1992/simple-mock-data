@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src/**",
-    "example": "node ./example"
+    "example": "nodemon ./example"
   },
   "bin": {
     "simple-mock-data": "./bin/simple-mock-data.js"
