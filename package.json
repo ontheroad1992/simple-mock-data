@@ -4,10 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src/**",
     "example": "nodemon ./example",
-    "example:cmd": "simple-mock-data -d ./example/db -P '' -ls 0"
+    "example:cmd": "simple-mock-data -p 3002 -d ./example/db -P '' -ls 1"
   },
   "bin": {
     "simple-mock-data": "./bin/simple-mock-data.js"

@@ -1,4 +1,4 @@
 const simpleMock = require('../src');
-const [dbPath, PROT, prefix, listShow] = process.argv.slice(2);
+const [PROT, dir, prefix, listShow] = process.argv.slice(2);
 // console.log(process.argv);
-simpleMock(PROT, dbPath, { prefix, listShow: Boolean(parseInt(listShow)) });
+simpleMock(PROT, dir, { prefix, listShow: Boolean(parseInt(listShow)) });

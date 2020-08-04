@@ -14,7 +14,7 @@ program
   .option('-p, --prot [number]', '端口号', 3001)
   .option('-d, --dir <string>', '路径', './db')
   .option('-P, --prefix <string>', '接口前缀', '/api')
-  .option('-ls, --listShow <boolean>', '是否显示接口列表', 1);
+  .option('-ls, --listShow <number>', '是否显示接口列表', 1);
 
 program.parse(process.argv);
 
@@ -27,7 +27,7 @@ nodemon({
   exec: `node ${path.resolve(__dirname, './start.js')}`,
   stdout: true,
   watch: [`${dbPath}/**/*`],
-  args: [dbPath, prot, prefix, listShow],
+  args: [prot, dir, prefix, listShow],
 }).on('restart', (data) => {
   // eslint-disable-next-line no-console
   console.log('restart', data);

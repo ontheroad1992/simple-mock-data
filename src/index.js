@@ -14,10 +14,10 @@ function defaultDbPath(dbPath) {
 /**
  * 简单的mock本地服务
  * @param {number} PROT 端口
- * @param {string} dbPath 路径配置
+ * @param {string} dir 文件相对路径
  * @param {object} option 路由配置
  */
-const simpleMock = (PROT = 3001, dbPath, option) => {
+const simpleMock = (PROT = 3001, dir, option) => {
   option = {
     prefix: '/api',
     listShow: true,
@@ -26,7 +26,7 @@ const simpleMock = (PROT = 3001, dbPath, option) => {
 
   const baseUrl = `http://localhost:${PROT}`;
   app.use(cors());
-  app.use(routes(defaultDbPath(dbPath), baseUrl, option));
+  app.use(routes(defaultDbPath(dir), baseUrl, option));
 
   return app.listen(PROT, () => {
     // eslint-disable-next-line no-console
